@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Font Awesome Icons</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/b55a42404d.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./node_modules/@splidejs/splide/dist/css/splide.min.css">
+  <script src="/node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
+  <link rel="stylesheet" href="/css/test.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="splide">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide" style="height: 420px;"><img src="/imgage/slider-badging.jpg" /></li>
+          <li class="splide__slide"><img src="/imgage/slider-badag.jpg" /></li>
+          <li class="splide__slide"><img src="/imgage/slider-scale.jpg" /></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script>
+  var splide = new Splide('.splide', {
+    type: 'loop',
+    perPage: 1,
+    autoplay: true,
+    padding: { left: '3%', right: '3%', bottom: '10px' },
+    gap: "13px",
+
+  });
+
+
+  splide.mount();
+</script>
+
+</html>

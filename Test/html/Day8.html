@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Test/css/Day8.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form>
+            <div class="form-control username">
+                <input type="text" placeholder="Username">
+                <span></span>
+                <small></small>
+            </div>
+            <div class="form-control mail">
+                <input type="email" placeholder="Email">
+                <span></span>
+                <small></small>
+            </div>
+            <div class="form-control password">
+                <input type="password" placeholder="Password">
+                <span></span>
+                <small></small>
+            </div>
+            <div class="form-control confirm">
+                <input type="password" placeholder="Confirm password">
+                <span></span>
+                <small></small>
+            </div>
+            <input type="submit" id="submit" value="Login">
+            <p>Not a member? <a href="#">Sign up</a></p>
+        </form>
+    </div>
+</body>
+<script>
+    let form = document.querySelector('form');
+    let userName = document.getElementsByClassName('username')[0];
+    let email = document.getElementsByClassName('mail')[0];
+    let pass = document.getElementsByClassName('password')[0];
+    let confirm = document.getElementsByClassName('confirm')[0];
+    form.addEventListener('submit',(e)=>{
+        e.preventDefault();
+    })
+    let submit = document.getElementById('submit');
+    submit.addEventListener('click',()=>{
+        if(userName.firstElementChild.value == ""){
+            console.log(userName.lastElementChild);
+            userName.lastElementChild.innerText = "Username is required"
+        }
+        if(pass.firstElementChild.value == ""){
+            console.log(userName.lastElementChild);
+            pass.lastElementChild.innerText = "Password is required"
+        }
+        if(confirm.firstElementChild.value == ""){
+            console.log(userName.lastElementChild);
+            confirm.lastElementChild.innerText = "Confirm password is required"
+        }
+        if(email.firstElementChild.value ==""){
+            console.log(userName.lastElementChild);
+            email.lastElementChild.innerText = "Email is required"
+        }
+        
+    })
+</script>
+</html>

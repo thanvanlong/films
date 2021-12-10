@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/Day6.css">
+</head>
+
+<body>
+    <div class="press">
+        Press any key
+    </div>
+    <div class="container hide">
+        <div class="number">
+            18
+        </div>
+        <div class="detail">
+            <div class="key">
+                <p>Key</p>
+                <p class="kValue">18</p>
+            </div>
+            <div class="key">
+                <p>Location</p>
+                <p class="kLocation">18</p>
+            </div>
+            <div class="key">
+                <p>Which</p>
+                <p class="kWhich">18</p>
+            </div>
+            <div class="key">
+                <p>Code</p>
+                <p class="kCode">18</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let press = document.getElementsByClassName('press')[0];
+    let container = document.getElementsByClassName('container')[0];
+    let eKey = document.getElementsByClassName('kValue')[0];
+    let eLocation = document.getElementsByClassName('kLocation')[0];
+    let eWhich = document.getElementsByClassName('kWhich')[0];
+    let eCode = document.getElementsByClassName('kCode')[0];
+    document.addEventListener('keydown', (e) => {
+        press.classList.add('hide');
+        container.classList.remove('hide');
+        eKey.innerText = e.key;
+        eCode.innerText = e.code;
+        eWhich.innerText = e.which;
+        eLocation.innerText = e.location;
+        document.getElementsByClassName('number')[0].textContent = e.keyCode
+    })
+</script>
+
+</html>

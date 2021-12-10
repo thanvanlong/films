@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/Day9.css">
+    <script src="https://kit.fontawesome.com/b55a42404d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="input-search">
+            <input type="text" placeholder="Search..." id="input">
+        </div>
+        <div class="content">
+            <div class="location">
+                <span class="city">Bac Giang</span>
+                <span>,</span>
+                <span class="country">VN</span>
+                <p>08:25:07, 26/11/2021</p>
+            </div>
+            <div class="temp">
+                <span class="temp__value">20 </span>
+                <span><sup>o</sup>C</span>
+            </div>
+            <div class="weather">
+                RAIN
+            </div>
+            <div class="details">
+                <div class="detail visibility">
+                    <i class="far fa-eye"></i>
+                    <span>2500 m</span>
+                </div>
+                <div class="detail wind">
+                    <i class="fas fa-wind"></i>
+                    <span>2.57 (m/s)</span>
+                </div>
+                <div class="detail rain">
+                    <i class="fas fa-cloud-sun"></i>
+                    <span>5 (%)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let input = document.getElementById('input');
+    let city = document.getElementsByClassName('city')[0];
+    let country = document.getElementsByClassName('country')[0];
+    let date = document.querySelectorAll('p')[0];
+    let tempValue = document.getElementsByClassName('temp__value')[0];
+    let main = document.getElementsByClassName('weather')[0];
+    let visibility = document.getElementsByClassName('visibility')[0];
+    let wind = document.getElementsByClassName('wind')[0];
+    console.log(wind);
+    let rain = document.getElementsByClassName('rain')[0];
+    getWeather('bac giang')
+    input.addEventListener('keyup', (e) => {
+        if (e.keyCode == 13) {
+            getWeather(e.target.value);
+        }
+    })
+    
+    async function getWeather(input) {
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${input}&units=metric&appid=d78fd1588e1b7c0c2813576ba183a667`
+        const res = await fetch(url)
+        const weather = await res.json()
+
+        city.textContent = weather.name;
+        country.textContent = weather.sys.country;
+        date.textContent = new Date().toLocaleString();
+        tempValue.textContent = Math.floor(weather.main.temp);
+        console.log(weather.main.temp);
+        main.innerHTML = weather.weather[0].main;
+        console.log(weather.weather[0].main);
+        visibility.lastElementChild.textContent = weather.visibility + ' (m)';
+        wind.lastElementChild.textContent = weather.wind.speed + ' (m/s)' ;
+        rain.lastElementChild.textContent = weather.clouds.all + ' (%)';
+        console.log(weather);
+    }
+</script>
+
+</html>

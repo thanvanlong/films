@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/index2.css">
+    <script src="https://kit.fontawesome.com/b55a42404d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="nav-child">
+            <div class="text-icon">
+                <p>NEW</p>
+                <i class="fas fa-angle-left"></i>
+            </div>
+            <div class="dropdown">
+                <ul>
+                    <li>
+                        Item1
+                    </li>
+                    <li>
+                        Item2
+                    </li>
+                    <li>
+                        Item3
+                    </li>
+                    <li>Item4</li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav-child">
+            <div class="text-icon">
+                <p>GAME</p>
+                <i class="fas fa-angle-left"></i>
+            </div>
+            <div class="dropdown">
+                <ul>
+                    <li>
+                        Item1
+                    </li>
+                    <li>
+                        Item2
+                    </li>
+                    <li>
+                        Item3
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav-child">
+            <div class="text-icon">
+                <p>TRICK</p>
+                <i class="fas fa-angle-left"></i>
+            </div>
+            <div class="dropdown">
+                <ul>
+                    <li>
+                        Item1
+                    </li>
+                    <li>
+                        Item2
+                    </li>
+                    <li>
+                        Item3
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav-child">
+            <div class="text-icon">
+                <p>NEW</p>
+                <i class="fas fa-angle-left"></i>
+            </div>
+            <div class="dropdown">
+                <ul>
+                    <li>
+                        Item1
+                    </li>
+                    <li>
+                        Item2
+                    </li>
+                    <li>
+                        Item3
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let list = document.querySelectorAll('.text-icon');
+    list.forEach((item) => item.addEventListener('mouseover',(e)=>{
+        item.nextElementSibling.setAttribute('style','height:110px;cursor:pointer;');
+        item.nextElementSibling.lastElementChild.setAttribute('style', 'opacity:1;cursor:pointer');
+        item.lastElementChild.setAttribute('style','transform:rotate(90deg);')
+        console.log(item.nextElementSibling.lastElementChild);
+        
+    }))
+    list.forEach((item) => item.parentElement.addEventListener('mouseleave',(e)=>{
+        item.nextElementSibling.setAttribute('style','height:0;');
+        item.lastElementChild.setAttribute('style','transform:rotate(270deg);')
+    }))
+</script>
+</html>

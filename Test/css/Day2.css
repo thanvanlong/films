@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(45deg, #00853e, #50c878);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ .card {
+  width: 300px;
+  height: 370px;
+  background: #242628;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-left: 50px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+ .card .img{
+  width: 120px;
+  height: 120px;
+  margin-top: 0 auto;
+  transform: translateY(25px);
+  overflow: hidden;
+  border-radius: 50%;
+  border: 3px solid salmon;
+  transition: 0.25s linear;
+}
+ .card .img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+ .card h2{
+  color: white;
+  margin-top: 35px;
+  transition: 1s;
+}
+ .card p{
+  color: salmon;
+  font-size: 17px;
+  margin-top: 5px;
+}
+
+
+ .card .link a{
+  text-decoration: none;
+  display: inline-block;
+  margin: 25px 20px 40px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+ .card button{
+  padding: 5px 10px;
+  color: white;
+  background:  none;
+  border: 2px solid salmon;
+  font-size: 17px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+ .card .img:hover{
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+  border-radius: unset;
+  border: unset;
+  transform: unset;
+  background: #00853e;
+  overflow: unset;
+}
+

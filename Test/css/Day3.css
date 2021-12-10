@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(
+    45deg,
+    rgb(65, 88, 208) 0%,
+    rgb(200, 80, 192) 50%,
+    rgb(255, 204, 112) 100%
+  );
+  
+  height: 100vh;
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; */
+}
+.open{
+    position: fixed;
+    top: 50%;
+    left: 45%;
+    padding: 15px 25px;
+    border: none;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.open:hover{
+    background: rgb(211, 211, 211);
+}
+.modal{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+}
+.model{
+    width: 500px;
+    height: 250px;
+    background: white;
+    border-radius: 10px;
+    position: relative;
+    top: 0;
+    left: calc(50% - 250px);
+    animation: animate linear 0.2s;
+    animation-fill-mode: forwards;
+    
+}
+.hide{
+    display: none;
+}
+@keyframes animate {
+    from{
+        transform: translateY(0px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(300px);
+        opacity: 1;
+    }
+}
+.model .model__header{
+    width: 100%;
+    height: 50px;
+    background: #e26e70;
+    color: white;
+}
+.model h2{
+    color: #e26e70;
+    margin: 10px 15px;
+}
+p{
+    margin: 10px 15px;
+}
+.model button{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    background: #e26e70;
+    color: white;
+    cursor: pointer;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/Day4.css">
+    <script src="https://kit.fontawesome.com/b55a42404d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="show">
+        <span class="close"><i class="fas fa-times"></i></span>
+        <div class="showig">
+            <span id="back"><i class="fas fa-chevron-left"></i></span>
+            <img src="https://pdp.edu.vn/wp-content/uploads/2021/01/hinh-anh-girl-xinh-toc-ngan-de-thuong.jpg" alt=""
+                id="img">
+            <span id="next"><i class="fas fa-chevron-right"></i></span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="content">
+            <img src="https://www.dungplus.com/wp-content/uploads/2019/12/girl-xinh-1-480x600.jpg" alt="">
+        </div>
+        <div class="content">
+            <img src="https://pdp.edu.vn/wp-content/uploads/2021/01/hinh-anh-girl-xinh-toc-ngan-de-thuong.jpg" alt="">
+        </div>
+        <div class="content">
+            <img src="https://thuthuatnhanh.com/wp-content/uploads/2019/05/gai-xinh-toc-ngan-facebook.jpg" alt="">
+        </div>
+        <div class="content">
+            <img src="https://pdp.edu.vn/wp-content/uploads/2021/01/hinh-anh-girl-xinh-toc-ngan-de-thuong.jpg" alt="">
+        </div>
+        <div class="content">
+            <img src="https://www.dungplus.com/wp-content/uploads/2019/12/girl-xinh-1-480x600.jpg" alt="">
+        </div>
+        <div class="content">
+            <img src="https://pdp.edu.vn/wp-content/uploads/2021/01/hinh-anh-girl-xinh-toc-ngan-de-thuong.jpg" alt="">
+        </div>
+        <div class="content">
+            <img src="https://www.dungplus.com/wp-content/uploads/2019/12/girl-xinh-1-480x600.jpg" alt="">
+        </div>
+        <div class="content">
+            <img src="https://pdp.edu.vn/wp-content/uploads/2021/01/hinh-anh-girl-xinh-toc-ngan-de-thuong.jpg" alt="">
+        </div>
+        <div class="content">
+            <img src="https://www.dungplus.com/wp-content/uploads/2019/12/girl-xinh-1-480x600.jpg" alt="">
+        </div>
+        <div class="content">
+            <img src="https://pdp.edu.vn/wp-content/uploads/2021/01/hinh-anh-girl-xinh-toc-ngan-de-thuong.jpg" alt="">
+        </div>
+        <div class="content">
+            <img src="https://www.dungplus.com/wp-content/uploads/2019/12/girl-xinh-1-480x600.jpg" alt="">
+        </div>
+        <div class="content">
+            <img src="https://thuthuatnhanh.com/wp-content/uploads/2019/05/gai-xinh-toc-ngan-facebook.jpg" alt="">
+        </div>
+    </div>
+</body>
+<script>
+    let arrImg = document.getElementsByClassName('content');
+    let imgShow = document.getElementById('img');
+    let show = document.getElementsByClassName('show')[0];
+    let back = document.getElementById('back');
+    let next = document.getElementById('next');
+    show.classList.toggle('hide');
+    let count = 0;
+    for (let index = 0; index < arrImg.length; index++) {
+        const element = arrImg[index];
+        element.addEventListener('click', () => {
+            console.log(element.firstElementChild.src);
+            imgShow.src = element.firstElementChild.src;
+            show.classList.toggle('hide');
+            count = index;
+            if (index == 0) {
+                back.classList.add('hide')
+            } else {
+                back.classList.remove('hide')
+            }
+            if (index == 11) {
+                next.classList.add('hide');
+            } else {
+                next.classList.remove('hide');
+            }
+        })
+    }
+    show.firstElementChild.addEventListener('click', () => {
+        show.classList.toggle('hide')
+    })
+    back.addEventListener('click', () => {
+        imgShow.src = arrImg[count - 1].firstElementChild.src;
+        if (count == 1) {
+            back.classList.add('hide')
+        } else {
+            back.classList.remove('hide')
+        }
+        if(count <= 11){
+            next.classList.remove('hide')
+        }
+        console.log(count);
+        count = count - 1;
+    })
+    next.addEventListener('click', () => {
+        imgShow.src = arrImg[count + 1].firstElementChild.src;
+        count = count + 1;
+        back.classList.remove('hide')
+        if (count == 11) {
+            next.classList.add('hide');
+        } else {
+            next.classList.remove('hide');
+        }
+    })
+    console.log(count);
+</script>
+
+</html>

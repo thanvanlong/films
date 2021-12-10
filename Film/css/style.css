@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    position: relative;
+    top: 5px;
+    z-index: 1;
+}
+
+header img{
+    padding-left: 20px;
+    height: 40px;
+    cursor: pointer;
+}
+
+header a{
+    width: 120px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid #FF6B00;
+    border-radius: 10px;
+    color: #FF6B00;
+    text-align: center;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    cursor: pointer;
+}
+header span{
+    position: relative;
+    top: 10px;
+    cursor: pointer;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.slogan{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.slogan .slogan-1{
+    position: relative;
+    top: 73px;
+    font-family: "Ubuntu";
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+    width: 800px;
+    text-align: center;
+}
+
+.slogan .slogan-2{
+    color: white;
+    font-size: 20px;
+    width: 900px;
+    font-family: "Ubuntu";
+    position: relative;
+    top: 13px
+}
+
+.container button{
+    width: 650px;
+    height: 70px;
+    background: #00A3FF;
+    border: none;
+    border-radius: 18px;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    position: relative;
+    top: 25px;
+}
+
+.container p{
+    color: white;
+    width: 1200px;
+    text-align: center;
+    font-size: 15px;
+    font-family: "Ubuntu";
+    position: relative;
+    top: 50px;
+}
+.container img{
+    width: 600px;
+    position: relative;
+    top: 90px;
+}
+
+.login{
+    width: 380px;
+    height: 547px;
+    /* background: rgba(255, 255, 255, .1); */
+    background-image: linear-gradient(rgba(53,53,53,.5), rgba(0,0,0,.1) );
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    border: rgba(0, 0, 0, 0.2) solid 1px;
+    border-radius: 10px;
+    position: relative;
+    
+    top: 70px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+.login img{
+    width: 100px;
+    position: absolute;
+    top: 35px ;
+    left: 140px;
+}
+
+.username{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 120px;
+    left: 40px;
+    color: white;
+    font-family: "Ubuntu";
+}
+.username input{
+    background: none;
+    border: 1px solid #ECECEC;
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 7px;
+    color: white;
+    padding-left: 10px;
+}
+
+.pass{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 190px;
+    left: 40px;
+    color: white;
+    font-family: "Ubuntu";
+}
+.pass input{
+    background: none;
+    border: 1px solid #ECECEC;
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 7px;
+    color: white;
+    font-family: "Ubuntu";
+    padding-left: 10px;
+    
+}
+
+.rememberme{
+    background-color: yellowgreen;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    position: absolute;
+    top: 265px;
+    left: 37px;
+}
+.checkbox{
+    position: absolute;
+    top: 268px;
+    left: 70px;
+    color: white;
+    font-family: "Ubuntu";
+    font-size: 15px;
+}
+
+.submit{
+    width: 130px;
+    height: 40px;
+    background: #FF6B00;
+    box-shadow: 0px 3px 50px #FF6B00;
+    border: none;
+    border-radius: 15px;
+    position: absolute;
+    top: 320px;
+    left: 130px;
+    color: white;
+    font-family: "Ubuntu";
+    font-size: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.login span{
+    position: absolute;
+    top: 375px;
+    left: 180px;
+    color: white;
+    font-family: "Ubuntu";
+    font-size: 15px;
+}
+.ilogin{
+    position: absolute;
+    top: 420px;
+    left: 45px;
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.ilogin i{
+    font-size: 20px;
+    color: #FF6B00;
+    cursor: pointer;
+}
+.login p{
+    position: absolute;
+    top: 495px;
+    left: 85px;
+    color: white;
+    font-family: "Ubuntu";
+    font-size: 12px;
+}
+.login a{
+    text-decoration: none;
+    color: #FF6B00;
+    font-family: "Ubuntu";
+    font-size: 12px;
+    position: absolute;
+    top: 506px;
+    left: 245px;
+
+}

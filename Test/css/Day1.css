@@ -1,0 +1,193 @@
+/* *{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #010b10;
+}
+.loader{
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.loader span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    animation: animate 4s ease-in-out infinite;
+    animation-delay: calc(0.2s * var(--i));
+}
+
+.loader span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: calc(50%-20px);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(#fce4ec,#03a9f4);
+}
+
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    50%,100%{
+        transform: rotate(360deg);
+    }
+} */
+
+/*Day1*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+	height: 100vh;
+	background-image: linear-gradient(to right, #4daf54, #3d8880);
+	overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    width: 400px;
+    height: 500px;
+    background: #272d40;
+    border-radius: 20px;
+    position: relative;
+}
+.card .react{
+    width: 95%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 9px;
+    color: white;
+}
+.card .react i{
+    font-size: 20px;
+    padding: 0 9px;
+}
+.card .name {
+    width: 100%;
+    height: 190px;
+    position: absolute;
+    top: 125px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card .name img{
+    width: 70%;
+    transition: 0.3s ease-out;
+}
+.card .name p{
+    transition: 0.8s cubic-bezier(.17,.67,.27,.99)
+}
+.card .name p{
+    color: white;
+    font-weight: 800;
+    font-size: 35px;
+}
+
+.card:hover .name img{
+    width: 60%;
+    transform: translateY(-125px) rotate(-40deg);
+}
+.card:hover .name .name_e{
+    transform: translate(-35px,-80px);
+}
+.card:hover .name .price_e{
+    transform: translate(-140px,-80px);
+}
+.card .detail{
+    width: 100%;
+    height: 180px;
+    position: absolute;
+    bottom: -185px;
+    left: 0;
+    color: white;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    opacity: 0;
+    transition: 0.9s cubic-bezier(.17,.67,.27,.99) 0.1s;
+    transform-origin: bottom;
+}
+.card .detail .sizes{
+    display: flex;
+    width: 80%;
+    height: 30px;
+    font-size: 22px;
+    align-items: center;
+}
+.card .detail .sizes div{
+    width: 35px;
+    height: 35px;
+    background: whitesmoke;
+    font-size: 20px;
+    margin-left: 15px;
+    color: black;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: 700;
+}
+.card .detail .colors{
+    display: flex;
+    width: 80%;
+    height: 30px;
+    font-size: 22px;
+    align-items: center;
+    margin-top: 15px;
+}
+.card .detail .colors div{
+    width: 27px;
+    height: 27px;
+    margin-left: 15px;
+    border-radius: 50%;
+}
+.card .detail .btn{
+    width: 90%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+.card .detail .btn button{
+    padding: 15px 20px;
+    margin-right: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #4daf54;
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: 700;
+}
+.card:hover .detail {
+    transform: translateY(-180px);
+    opacity: 1;
+}

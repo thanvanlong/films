@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" >
+    <script src="splide.min.js"></script>
+</head>
+<body>
+    <nav class="container" >
+        <div class="con">
+            <p>RED</p>
+        </div>
+        <div class="con">
+            <p>BLUE</p>
+        </div>
+        <div id="ok"></div>
+        <div class="con">
+            <p>GREEN</p>
+        </div>
+        <div class="con">
+            <p>YELLOW</p>
+        </div>
+    </nav>
+    <div class="splide">
+        <div class="splide__track">
+              <ul class="splide__list">
+                  <li class="splide__slide">Slide 01</li>
+                  <li class="splide__slide">Slide 02</li>
+                  <li class="splide__slide">Slide 03</li>
+              </ul>
+        </div>
+      </div>
+</body>
+<script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+    var splide = new Splide( '.splide' );
+    splide.mount();
+  } );
+</script>
+</html>
